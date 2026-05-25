@@ -1,5 +1,6 @@
-from ultralytics import YOLO
 import cv2
+
+from ultralytics import YOLO
 
 # Load the YOLOv8 pre-trained model
 model = YOLO("yolov8n.pt")  # You can replace with yolov8m.pt or yolov8l.pt for better accuracy.
@@ -27,7 +28,7 @@ while True:
     cv2.imshow("YOLOv8 Detection", frame_with_boxes)
 
     # Break the loop if 'q' is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 # Release the capture object and close windows
